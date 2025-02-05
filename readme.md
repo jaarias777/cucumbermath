@@ -12,8 +12,8 @@ This project demonstrates how to use Cucumber.js for behavior-driven development
 1. Clone the repository:
 
    ```sh
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/jaarias777/cucumbermath.git
+   cd cucumbermath
    ```
 
 2. Install the dependencies:
