@@ -24,8 +24,17 @@ Given('I have {int} carrots', function (quantity) {
 });
 
 When('I eat {int} carrots', function (quantity) {
+  // Check if there are enough carrots to eat
+  if (this.carrots < quantity) {
+    this.error = new Error(`You don't have enough carrots`);
+    return;
+  }
   // Subtract the eaten carrots from the total
   this.carrots -= quantity;
+});
+
+Then('I get an error, that I don\'t have enough carrots', function () {
+  assert.strictEqual(this.error.message, "You don't have enough carrots");
 });
 
 // Combined steps for making a salad

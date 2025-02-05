@@ -8,7 +8,7 @@ Feature: Cucumber Mathematics
   Scenario: Let's eat carrots!
     Given I have 10 carrots
     When I eat 12 carrots
-    Then I have -2 carrots
+    Then I get an error, that I don't have enough carrots
 
   Scenario: Let's make a salad!
     Given I have 8 cucumbers and 5 carrots
